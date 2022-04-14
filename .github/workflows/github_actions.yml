@@ -22,3 +22,9 @@ jobs:
       run: npm install
     - name: Test
       run: npm test
+    - name: Check CPU
+      run: lscpu
+    - name: Check RAM
+      run: grep MemTotal /proc/meminfo
+    - name: Check disk size
+      run: df -h
